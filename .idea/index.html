@@ -29,26 +29,29 @@
 
             <h2>Add New Student</h2>
             <form action="#" class="registerForm">
+                <div  class="div_register_input">
+                    <div class="div_left">
+                        <label for="studentname">Full name*</label>
+                        <input type="text" placeholder="Jesus Perez">
+                        <label for="studentid">Student Code (ID)*</label>
+                        <input type="text" placeholder="1234">
+                        <label for="studentemail">Email</label>
+                        <input type="email" name="" id="" placeholder="jesusperez@gmail.com">
 
-                <div class="div_left">
-                    <label for="studentname">Full name*</label>
-                    <input type="text" placeholder="Jesus Perez">
-                    <label for="studentid">Student Code (ID)*</label>
-                    <input type="text" placeholder="1234">
-                    <label for="studentemail">Email</label>
-                    <input type="email" name="" id="" placeholder="jesusperez@gmail.com">
+                    </div>
+                    <div class="div_right">
+                        <label for="githud_link">GitHub Link</label>
+                        <input type="text" placeholder="http://github.com/jesusperez">
+                        <label for="studentphoto">Photo URL</label>
+                        <input type="text" placeholder="http://photo.com/jesusperez.jpg">
 
+                    </div>
                 </div>
-                <div class="div_right">
-                    <label for="githud_link">GitHub Link</label>
-                    <input type="text" placeholder="http://github.com/jesusperez">
-                    <label for="studentphoto">Photo URL</label>
-                    <input type="text" placeholder="http://photo.com/jesusperez.jpg">
+                <div class = "div_button_register">
                     <label for="description"> Description</label>
-                    <input type="text" placeholder="des" >
+                    <textarea class="textarea_description" name="text_area" cols="30" rows="10" placeholder="Description"></textarea>
+                    <input class="button_login" type="button" value="Register">
                 </div>
-
-                <input class="button_login" type="button" value="Register">
 
             </form>
 
