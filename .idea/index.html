@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Student Management System</h1>
+        <button class="button">
+            <label id="add_student" class="Add_student_button">Add Student</label>
+        </button>
+    </header>
+    <div id="list" class="globalContainer">
+        <div class="cardsContainer" >
+            <h1 class="title_card">Student List</h1>
+            <div class="cards_div" id="studentsList"></div>
+        </div>
+    </div>
+
+    <div class="registerContainer" id="register">
+
+        <div class="register">
+
+            <h2>Add New Student</h2>
+            <form action="#" class="registerForm">
+
+                <div class="div_left">
+                    <label for="studentname">Full name*</label>
+                    <input type="text" placeholder="Jesus Perez">
+                    <label for="studentid">Student Code (ID)*</label>
+                    <input type="text" placeholder="1234">
+                    <label for="studentemail">Email</label>
+                    <input type="email" name="" id="" placeholder="jesusperez@gmail.com">
+
+                </div>
+                <div class="div_right">
+                    <label for="githud_link">GitHub Link</label>
+                    <input type="text" placeholder="http://github.com/jesusperez">
+                    <label for="studentphoto">Photo URL</label>
+                    <input type="text" placeholder="http://photo.com/jesusperez.jpg">
+                    <label for="description"> Description</label>
+                    <input type="text" placeholder="des" >
+                </div>
+
+                <input class="button_login" type="button" value="Register">
+
+            </form>
+
+            <button class="goBackBtn" id="goBack">Go back</button>
+        </div>
+
+    </div>
+    <template id="studentCardTemplate">
+        <div class="studentCard">
+            <figure class="div_card">
+                <img  class="profileImg student-photo" src="sources/estudiante1.jpg" alt="foto del estudiante">
+                <button class="button_edit">
+                    <img class="img_button_edit" src="sources/boton-editar.png" alt="">
+                </button>
+            </figure>
+
+            <div class="card_content">
+                <p class="nombre student-name">Estudiante</p>
+                <p class="codigo student-id">1234</p>
+                <p class="correo student-email"> estudiante@gmail.com</p>
+                <button class="boton github-link">
+                    <img class="button_img" src="sources/logoGithub.png">
+                    <label class="button_name">Github</label>
+                </button>
+            </div>
+        </div>
+    </template>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/register.js"></script>
+
+</body>
+</html>
