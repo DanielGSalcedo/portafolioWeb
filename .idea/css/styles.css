@@ -121,7 +121,6 @@ header{
 .card_content{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 0.5rem;
     height: 8rem ;
 
