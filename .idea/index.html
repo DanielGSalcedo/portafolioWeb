@@ -62,16 +62,17 @@
     <template id="studentCardTemplate">
         <div class="studentCard">
             <figure class="div_card">
-                <img  class="profileImg student-photo" src="sources/estudiante1.jpg" alt="foto del estudiante">
-                <button class="button_edit">
+                <img  class="profileImg student-photo" alt="foto del estudiante">
+                <button id="btn_edit" class="button_edit">
                     <img class="img_button_edit" src="sources/boton-editar.png" alt="">
                 </button>
             </figure>
 
             <div class="card_content">
                 <p class="nombre student-name">Estudiante</p>
-                <p class="codigo student-id">1234</p>
+                <p class="codigo student-id">ID: <span>123</span></p>
                 <p class="correo student-email"> estudiante@gmail.com</p>
+                <p class="descripcion student-description">Descripcion</p>
                 <button id="bnt_github" class="boton student-github">
                     <img class="button_img" src="sources/logoGithub.png">
                     <label class="button_name">Github</label>
