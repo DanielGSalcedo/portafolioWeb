@@ -32,25 +32,25 @@
                 <div  class="div_register_input">
                     <div class="div_left">
                         <label for="studentname">Full name*</label>
-                        <input type="text" placeholder="Jesus Perez">
+                        <input id="new_student_name" type="text" placeholder="Jesus Perez">
                         <label for="studentid">Student Code (ID)*</label>
-                        <input type="text" placeholder="1234">
+                        <input id="new_student_code" type="text" placeholder="1234">
                         <label for="studentemail">Email</label>
-                        <input type="email" name="" id="" placeholder="jesusperez@gmail.com">
+                        <input id="new_student_email" type="email" placeholder="jesusperez@gmail.com">
 
                     </div>
                     <div class="div_right">
                         <label for="githud_link">GitHub Link</label>
-                        <input type="text" placeholder="http://github.com/jesusperez">
+                        <input id="new_student_githubLink" type="text" placeholder="http://github.com/jesusperez">
                         <label for="studentphoto">Photo URL</label>
-                        <input type="text" placeholder="http://photo.com/jesusperez.jpg">
+                        <input id="new_student_photo" type="text" placeholder="http://photo.com/jesusperez.jpg">
 
                     </div>
                 </div>
                 <div class = "div_button_register">
                     <label for="description"> Description</label>
-                    <textarea class="textarea_description" name="text_area" cols="30" rows="10" placeholder="Description"></textarea>
-                    <input class="button_login" type="button" value="Register">
+                    <textarea id="new_student_description" class="textarea_description" name="text_area" cols="30" rows="10" placeholder="Description"></textarea>
+                    <input id="bnt_register" class="button_login" type="button" value="Register">
                 </div>
 
             </form>
@@ -72,7 +72,7 @@
                 <p class="nombre student-name">Estudiante</p>
                 <p class="codigo student-id">1234</p>
                 <p class="correo student-email"> estudiante@gmail.com</p>
-                <button class="boton github-link">
+                <button id="bnt_github" class="boton student-github">
                     <img class="button_img" src="sources/logoGithub.png">
                     <label class="button_name">Github</label>
                 </button>

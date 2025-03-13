@@ -27,5 +27,23 @@ const api = {
       console.error('Error fetching students:', error);
       throw error;
     }
+  },
+  
+  async createNewStudent(student) {
+    try{
+      const response = await fetch(`${API_URL}/student`, {
+        method: 'POST',
+        headers: this.headers,
+        body: JSON.stringify(student)
+      });
+      if(!response.ok){
+        throw new Error('Failed to add student');
+      }
+      
+      return await response.json();
+    }catch (error) {
+      console.log('error adding student:', error);
+      throw error;
+    }
   }
 }
