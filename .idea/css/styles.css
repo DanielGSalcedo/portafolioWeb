@@ -77,6 +77,8 @@ header{
     box-shadow: 0 0 5px gray;
     background-color: #D1F8EF;
     overflow: hidden;
+    max-height: 30rem;
+
 }
 .nombre{
     font-weight: bold;
@@ -121,6 +123,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     margin: 0.5rem;
+    height: 8rem ;
 
 }
 .titulo{
@@ -131,7 +134,12 @@ header{
     justify-items: left;
     width: 90%;
 }
-
+.descripcion{
+    display: flex;
+    text-align: left;
+    max-height: 5rem;
+    overflow: hidden;
+}
 .title_card{
     color: #3674B5;
     margin-top: 2rem;
