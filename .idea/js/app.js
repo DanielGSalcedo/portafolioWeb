@@ -37,26 +37,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             window.open(githubBnt.href, '_blank');
         }
     })
-    studentsList.addEventListener('click', (event) => {
+    studentsList.addEventListener('click', async (event) => {
         const editBnt = event.target.closest('#btn_edit')
         const code = event.target.closest('.studentCard').querySelector('span').textContent;
-        const name = event.target.closest('.studentCard').querySelector('.student-name').textContent;
-        const email = event.target.closest('.studentCard').querySelector('.student-email').textContent;
-        const description = event.target.closest('.studentCard').querySelector('.student-description').textContent;
-        const photo = event.target.closest('.studentCard').querySelector('.student-photo').src;
-        const github_link = event.target.closest('.studentCard').querySelector('.student-github').href;
+        const student = await api.getStudent(code)
+        const inputCode = document.getElementById('new_student_code');
         if (editBnt) {
             containerHome.style.display = 'none';
             containerRegister.style.display = 'flex';
             containerRegister.querySelector('h2').innerText = 'Edit Student';
             containerRegister.querySelector('#bnt_register').value = 'Save';
-            containerRegister.querySelector('#new_student_name').value =name ;
-            containerRegister.querySelector('#new_student_code').placeholder = code;
-            containerRegister.querySelector('#new_student_code').disabled = true;
-            containerRegister.querySelector('#new_student_email').value = email;
-            containerRegister.querySelector('#new_student_githubLink').value= github_link;
-            containerRegister.querySelector('#new_student_photo').value = photo;
-            containerRegister.querySelector('#new_student_description').value = description;
+            containerRegister.querySelector('#new_student_name').value = student.name ;
+            containerRegister.querySelector('#new_student_email').value = student.email;
+            containerRegister.querySelector('#new_student_githubLink').value= student.github_link;
+            containerRegister.querySelector('#new_student_photo').value = student.photo;
+            containerRegister.querySelector('#new_student_description').value = student.description;
+            inputCode.placeholder= student.code;
+            inputCode.disabled = true;
         }
     })
 
@@ -100,8 +97,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Initial render
     await renderStudents();
-
-    // add student
-
-
 });

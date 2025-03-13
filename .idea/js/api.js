@@ -50,7 +50,7 @@ const api = {
 
     async editStudent(student) {
         try {
-            const response = await fetch(`${API_URL}/student?code=eq.${student.id}`, {
+            const response = await fetch(`${API_URL}/student?code=eq.${student.id}&select=*`, {
                 method: 'PATCH',
                 headers: this.headers,
                 body: JSON.stringify(student)
@@ -63,6 +63,23 @@ const api = {
             console.error(`Error editing student with the code ${student.code}:`, error);
             throw error;
 
+        }
+    },
+
+    async getStudent(code) {
+        try {
+            const response = await fetch(`${API_URL}/student?code=eq.${code}&select=*`, {
+                headers: this.headers
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch student');
+            }
+            const data = await response.json();
+            return data[0]|| null;
+        } catch (error) {
+            console.error(`Error fetching student with the code ${code}:`, error);
+            throw error;    
         }
     }
 }
