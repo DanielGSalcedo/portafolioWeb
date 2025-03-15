@@ -2,9 +2,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif, 'Material Icons';
 }
 
+/*google fonts*/
+
+
+ .material-symbols-outlined {
+    color: #D3D3D3;
+     font-variation-settings:
+             'FILL' 0,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 24
+ }
+ /*buttons*/
+.button{
+    display: flex;
+    padding: .5rem;
+    margin: .2rem;
+    width: 3.2rem;
+    min-width: 3.2rem;
+    max-width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    border: none;
+
+}
+
+.button:hover{
+    transition: 0.5s;
+    transform: translateY(-3%);
+    background: #282c34;
+}
+
+/*body*/
+body{
+    background: radial-gradient(circle at 50% 50%, #282c34, #20232a);
+
+}
 .montserrat-h1 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -12,12 +52,58 @@
     font-style: normal;
 }
 header{
-    background-color: #3674B5;
+    background: transparent;
+    width:100%;
     display: flex;
     justify-content: space-between;
-    padding: 0.3rem;
+    align-items: center;
+    padding: 0 0.5rem .5rem ;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-radius:  30rem ;
+        background: #3a3f4b;
+        padding: 0 1rem;
+        width: 85%;
+        .search-bard {
+            margin: 0 0.5rem;
+            background: transparent;
+            height: 2.5rem;
+            flex-grow: 1;
+            border: none ;
+            color:  #87CEFA;
+            outline: none;
+
+            .search-bard::placeholder {
+                color: #87CEFA;
+
+            }
+        }
+
+    }
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #3a3f4b inset !important;
+    -webkit-text-fill-color: #87CEFA !important;
+    border: none !important;
+    outline: none !important;
+}
+header.scrolled {
+    background: radial-gradient(circle at 50% 50%,  rgba(40, 44, 52, 0.95), rgba(32, 35, 42, 0.95) );
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 2px -2px #20232a;
+    border-bottom: 1px solid #282c34;
+}
+
 .button_login{
 
     background-color: #3674B5;
@@ -37,15 +123,13 @@ header{
 }
 .cardsContainer{
 
-    margin: 1rem;
-    margin-top: 0rem;
+    margin: 0 1rem 1rem;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    background-color: #D1F8EF;
 
 }
 .profileImg{
@@ -59,12 +143,13 @@ header{
 }
 
 .globalContainer{
+
     display: flex;
     flex-direction: column;
 
     align-content: center;
     align-items: center;
-    background-color: #D1F8EF;
+
 }
 
 .studentCard{
@@ -92,8 +177,7 @@ header{
     margin-top: 0.5rem;
     background-color: #3674B5;
     border-radius: 0.3rem;
-    border: 0.05rem solid;
-    border-color: #578FCA;
+    border: 0.05rem solid #578FCA;
     align-items: center;
     justify-content: center;
     width: 30%;
@@ -101,19 +185,7 @@ header{
     align-content: center;
 
 }
-.button{
-    display: flex;
-    padding: 1rem;
-    background-color: #A1E3F9;
-    border-radius: 0.3rem;
-    border: 0.05rem solid;
-    border-color: #578FCA;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    position: relative;
-    height: 3rem;
-}
+
 .Add_student_button{
     color: #3674B5;
     font-weight: bold;
@@ -126,12 +198,13 @@ header{
 
 }
 .titulo{
-    color: white;
+    color: #D3D3D3;
     text-align: left;
     padding-left: 0.5rem;
     justify-content: left;
     justify-items: left;
     width: 90%;
+    margin: 0 2rem;
 }
 .descripcion{
     display: flex;
@@ -140,8 +213,8 @@ header{
     overflow: hidden;
 }
 .title_card{
-    color: #3674B5;
-    margin-top: 2rem;
+    margin-top: 6rem;
+    color: #87CEFA;
     margin-left: 4rem;
     width: 100%;
 }
@@ -163,7 +236,7 @@ header{
     padding: 0.3rem;
     opacity: 50%;
     border: none;
-    box-shadow: 0px 0px 2px grey;
+    box-shadow: 0 0 2px grey;
 }
 
 .button_img{
@@ -260,18 +333,15 @@ header{
 .registerForm {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0rem 0rem 0rem;
+    padding: 2rem 0 0 0;
     width:100%;
 }
 
 .registerForm input {
     height: 3rem;
     width: 100%;
-    margin: 1rem;
-    margin-left: 0px;
-    margin-right: 0px;
-    border: 1px solid;
-    border-color: rgba(166, 0, 255, 0.6);
+    margin: 1rem 01rem 0;
+    border: 1px solid rgba(166, 0, 255, 0.6);
     border-radius: 0.5rem;
     place-content: center;
     padding: 0.5rem;
@@ -322,8 +392,7 @@ header{
     max-width: 100%;
     min-width: 100%;
     margin: 1rem;
-    border: 1px solid;
-    border-color: rgba(166, 0, 255, 0.6);
+border: 1px solid rgba(166, 0, 255, 0.6);
     border-radius: 0.5rem;
     padding: 0.5rem;
     overflow: auto;
@@ -342,7 +411,7 @@ header{
         align-items: center;
     }
     .title_card{
-        margin-left: 0rem;
+        margin-left: 0;
         justify-content:center;
         text-align: center;
     }

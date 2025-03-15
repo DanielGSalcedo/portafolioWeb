@@ -98,3 +98,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initial render
     await renderStudents();
 });
+
+document.addEventListener('scroll', (event) => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+})
