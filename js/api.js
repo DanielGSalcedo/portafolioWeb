@@ -48,21 +48,22 @@ const api = {
 
     },
 
-    async editStudent(student) {
+    async updateStudent(code, student) {
         try {
-            const response = await fetch(`${API_URL}/student?code=eq.${student.id}&select=*`, {
+            const response = await fetch(`${API_URL}/student?code=eq.${code}`, {
                 method: 'PATCH',
                 headers: this.headers,
                 body: JSON.stringify(student)
             });
+
             if (!response.ok) {
-                throw new Error('Failed to edit student');
+                throw new Error('Failed to update student');
             }
+
             return await response.json();
         } catch (error) {
-            console.error(`Error editing student with the code ${student.code}:`, error);
+            console.error(`Error updating student with code ${code}:`, error);
             throw error;
-
         }
     },
 

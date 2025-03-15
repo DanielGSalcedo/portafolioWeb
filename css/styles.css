@@ -170,11 +170,11 @@ header.scrolled {
     min-width: 20rem;
     margin: 1rem;
     border-radius: 1.5rem;
-    /*border: 2px solid  #3a3f4b;*/
     background: #282c34;
     overflow: hidden;
     max-height: 30rem;
-
+    cursor: pointer;
+    position: relative;
     .profileImg{
         width: 100%;
         height: 15rem;
@@ -186,10 +186,28 @@ header.scrolled {
     .card_content{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         height: 9rem ;
         background: #3a3f4b;
         padding: 0.5rem;
         overflow: hidden;
+    }
+
+    /* pressed animation style*/
+    .ripple {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: scale(2);
+        animation: rippleEffect 0.5s linear;
+        pointer-events: none;
+    }
+
+    @keyframes rippleEffect{
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
     }
     .card_content p{
         display: -webkit-box;
