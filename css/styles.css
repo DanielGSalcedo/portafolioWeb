@@ -78,6 +78,7 @@ header{
         align-items: center;
         margin-right: 1rem;
         width: 50%;
+        margin-left: auto;
     }
     .search-container {
         position: relative;
@@ -420,6 +421,7 @@ border: 1px solid rgba(166, 0, 255, 0.6);
     }
     .div_header_right{;
         margin-left: auto;
+        width: 100%;
     }
     .title_card{
         margin-top: 10rem;
