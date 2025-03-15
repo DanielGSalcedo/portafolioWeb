@@ -51,26 +51,42 @@ body{
     font-weight:700;
     font-style: normal;
 }
+
+/*header*/
 header{
     background: transparent;
     width:100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 0.5rem .5rem ;
     position: fixed;
     top: 0;
     z-index: 10;
-
+    .titulo{
+        color: #D3D3D3;
+        text-align: left;
+        padding-left: 0.5rem;
+        justify-content: left;
+        justify-items: left;
+        margin: 0 2rem;
+    }
+    .div_header_right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        width: 50%;
+    }
     .search-container {
         position: relative;
         display: flex;
         align-items: center;
-        width: 100%;
         border-radius:  30rem ;
         background: #3a3f4b;
         padding: 0 1rem;
-        width: 85%;
+        width: 100%;
         .search-bard {
             margin: 0 0.5rem;
             background: transparent;
@@ -197,15 +213,7 @@ header.scrolled {
     height: 8rem ;
 
 }
-.titulo{
-    color: #D3D3D3;
-    text-align: left;
-    padding-left: 0.5rem;
-    justify-content: left;
-    justify-items: left;
-    width: 90%;
-    margin: 0 2rem;
-}
+
 .descripcion{
     display: flex;
     text-align: left;
@@ -410,9 +418,14 @@ border: 1px solid rgba(166, 0, 255, 0.6);
         justify-content: center;
         align-items: center;
     }
+    .div_header_right{;
+        margin-left: auto;
+    }
     .title_card{
-        margin-left: 0;
+        margin-top: 10rem;
         justify-content:center;
         text-align: center;
     }
+
 }
+
