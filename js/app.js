@@ -19,12 +19,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             clone.querySelector('.student-id').querySelector('span').innerText = student.code;
             clone.querySelector('.student-email').textContent = student.email;
             clone.querySelector('.student-photo').src = student.photo;
-            clone.querySelector('.student-description').textContent = student.description
             const github_Button = clone.querySelector('.student-github');
             if (student.github_link) {
                 github_Button.href = student.github_link;
             } else {
                 github_Button.style.display = 'none';
+                const div = clone.querySelector('.card_content').querySelector('div');
+                div.style.justifyContent = 'center';
+                div.querySelectorAll('.button').forEach(button => {
+                  button.style.minWidth= '47%';
+                })             
             }
 
             studentsList.appendChild(clone);
@@ -51,7 +55,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             containerRegister.querySelector('#new_student_email').value = student.email;
             containerRegister.querySelector('#new_student_githubLink').value= student.github_link;
             containerRegister.querySelector('#new_student_photo').value = student.photo;
-            containerRegister.querySelector('#new_student_description').value = student.description;
             inputCode.placeholder= student.code;
             inputCode.disabled = true;
         }
@@ -99,7 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await renderStudents();
 });
 
-document.addEventListener('scroll', (event) => {
+document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 0) {
         header.classList.add('scrolled');

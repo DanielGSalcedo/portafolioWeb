@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"  rel="stylesheet"/>
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            rel="stylesheet"/>
 
     <!--css links-->
     <link rel="stylesheet" href="css/styles.css">
@@ -21,13 +22,13 @@
     <h1 class="titulo">Student Management System</h1>
     <div class="div_header_right">
         <div class="search-container">
-        <span class="material-symbols-outlined">search</span>
-            <label for="search"></label><input type="text" class="search-bard" id="search" placeholder= "Search student" >
+            <span class="material-symbols-outlined">search</span>
+            <label for="search"></label><input type="text" class="search-bard" id="search" placeholder="Search student">
         </div>
         <button class="button">
             <span class="material-symbols-outlined">light_mode</span>
         </button>
-        <button class="button">
+        <button id="add_student" class="button">
             <span class="material-symbols-outlined">person_add</span>
         </button>
     </div>
@@ -78,22 +79,38 @@
 </div>
 <template id="studentCardTemplate">
     <div class="studentCard">
+        <div class="div_card_buttons_top">
+            <button class="button">
+                <span class="material-symbols-outlined">more_horiz</span>
+            </button>
+            <button class="button">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
         <figure class="div_card">
             <img class="profileImg student-photo" src="" alt="foto del estudiante">
-            <button id="btn_edit" class="button_edit">
+            <!--<button id="btn_edit" class="button_edit">
                 <img class="img_button_edit" src="sources/boton-editar.png" alt="">
-            </button>
+            </button>-->
         </figure>
 
         <div class="card_content">
             <p class="nombre student-name">Estudiante</p>
             <p class="codigo student-id">ID: <span>123</span></p>
             <p class="correo student-email"> estudiante@gmail.com</p>
-            <p class="descripcion student-description">Descripcion</p>
-            <button id="bnt_github" class="boton student-github">
-                <img class="button_img" alt="" src="sources/logoGithub.png">
-                <label class="button_name">Github</label>
-            </button>
+
+            <div>
+                <button class="button ">
+                    <span class="material-symbols-outlined">edit_square</span> <label> Edit</label>
+                </button>
+                <button class="button ">
+                    <span class="material-symbols-outlined">import_contacts</span><label>  Overview</label>
+                </button>
+                <button class="student-github ">
+                    <img class="button_img" alt="" src="sources/logoGithub.png">
+                </button>
+            </div>
         </div>
     </div>
 </template>

@@ -28,7 +28,7 @@
 
     setTimeout(() => {
 
-    containerLogin.classList.remove("loginHide_anim");;
+    containerLogin.classList.remove("loginHide_anim");
     containerRegister.classList.add("registerHide_anim");
 
     setTimeout(() => {

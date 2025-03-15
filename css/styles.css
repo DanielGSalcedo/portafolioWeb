@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif, 'Material Icons';
+    color: #D3D3D3;
 }
 
 /*google fonts*/
@@ -14,7 +15,7 @@
              'FILL' 0,
              'wght' 400,
              'GRAD' 0,
-             'opsz' 24
+             'opsz' 1
  }
  /*buttons*/
 .button{
@@ -137,6 +138,7 @@ header.scrolled {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 100%;
+    background: transparent;
 }
 .cardsContainer{
 
@@ -149,15 +151,7 @@ header.scrolled {
     align-items: center;
 
 }
-.profileImg{
-    width: 100%;
-    height: 15rem;
-    object-fit: cover;
-    border-top-left-radius: 0.4rem;
-    border-top-right-radius: 0.4rem;
-    position: relative;
 
-}
 
 .globalContainer{
 
@@ -175,17 +169,131 @@ header.scrolled {
     width: 20rem;
     min-width: 20rem;
     margin: 1rem;
-    border-radius: 0.4rem;
-    box-shadow: 0 0 5px gray;
-    background-color: #D1F8EF;
+    border-radius: 1.5rem;
+    /*border: 2px solid  #3a3f4b;*/
+    background: #282c34;
     overflow: hidden;
     max-height: 30rem;
 
+    .profileImg{
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        position: relative;
+        background: radial-gradient(circle at 50% 30%, #3a3f4b, #282c34);
+    }
+
+    .card_content{
+        display: flex;
+        flex-direction: column;
+        height: 9rem ;
+        background: #3a3f4b;
+        padding: 0.5rem;
+        overflow: hidden;
+    }
+    .card_content p{
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        padding-left: 0.5rem;
+        margin-bottom: 0.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+    }
+    .div_card_buttons_top{
+        display: flex;
+        margin-left: auto;
+        padding: 0.2rem;
+    }
 }
+
+
+.div_card_buttons_top .button{
+    padding: 0;
+    max-width: 2rem;
+    max-height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    border-radius: 100%;
+
+}
+
+.card_content .button{
+    flex-direction: row;
+    border-radius: 1.3rem;
+    min-width: 37%;
+    min-height: 2.5rem;
+    margin: 0.3rem 0.2rem;
+    object-fit: contain;
+    padding: 0.5rem;
+    border: 1px solid #282c34;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card_content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_content div .material-symbols-outlined {
+    font-size: 16px;
+
+}
+.card_content div label{
+    padding: 0 0.4rem;
+    font-size: 14px;
+}
+.card_content div span{
+    margin: 0  0 0 0.5rem;
+}
+.card_content div .button{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    margin: 0.2rem;
+
+}
+.student-github{
+    display: flex;
+    padding: .5rem;
+    margin: .2rem;
+    border: 1px solid #282c34;
+    width: 3.2rem;
+    min-width: 3.2rem;
+    max-width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+
+    .button_img{
+        width: 50%;
+        margin: 0.1rem;
+        opacity: 0.7;
+    }
+}
+
+.student-github:hover{
+    transition: 0.5s;
+    transform: translateY(-3%);
+    background: #282c34;
+}
+.div_card_buttons_top .button .material-symbols-outlined{
+    object-fit: contain;
+    font-size: 18px;
+}
+.studentCard:hover{
+    transition: 0.5s;
+    transform: translateY(-1%);
+    background: #3a3f4b;
+    }
 .nombre{
     font-weight: bold;
-}
-.codigo{
 }
 .boton{
     display: flex;
@@ -207,13 +315,7 @@ header.scrolled {
     color: #3674B5;
     font-weight: bold;
 }
-.card_content{
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
-    height: 8rem ;
 
-}
 
 .descripcion{
     display: flex;
@@ -228,12 +330,6 @@ header.scrolled {
     width: 100%;
 }
 
-.button_name{
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    margin: 0.2rem;
-}
 
 .button_edit{
     position: absolute;
@@ -248,12 +344,6 @@ header.scrolled {
     box-shadow: 0 0 2px grey;
 }
 
-.button_img{
-    width: 30%;
-    margin: 0.1rem;
-
-}
-
 .div_card{
     display: flex;
     position: relative;
@@ -263,11 +353,7 @@ header.scrolled {
     width: 100%;
 
 }
-.studentCard:hover{
-    box-shadow: 0 0 10px gray;
-    transition: 0.5s;
-    transform: translateY(-1%);
-}
+
 
 .boton:hover{
     background-color: #578FCA;
@@ -413,15 +499,22 @@ border: 1px solid rgba(166, 0, 255, 0.6);
     flex-direction: column;
     margin-top: 1rem;
 }
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .cardsContainer{
         width: 100%;
         justify-content: center;
         align-items: center;
     }
-    .div_header_right{;
-        margin-left: auto;
+    .div_header_right{
         width: 100%;
+    }
+    .search-container{
+        width: 100%;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .title_card{
         margin-top: 10rem;
