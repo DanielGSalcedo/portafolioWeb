@@ -70,7 +70,7 @@ header{
         padding-left: 0.5rem;
         justify-content: left;
         justify-items: left;
-        margin: 0 2rem;
+        margin: 1rem 2rem;
     }
     .div_header_right{
         display: flex;
