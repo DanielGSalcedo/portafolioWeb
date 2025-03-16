@@ -191,8 +191,15 @@ async function edit_form(code) {
     }
 
 }
-function overview(code){
+async function overview(code) {
     hideHome();
     let pageoverview = document.querySelector('.overview')
-        pageoverview.style.display = 'flex';
+    pageoverview.style.display = 'flex';
+    let student = await api.getStudent(code);
+    pageoverview.querySelector('#img_perfil_overview').src = student.photo;
+    pageoverview.querySelector('h2').innerText = student.name;
+    pageoverview.querySelector('#span_overview_code').innerText = student.code;
+    pageoverview.querySelector('#span_overview_email').innerText = student.email;
+    pageoverview.querySelector('a').href = student.github_link;
+    pageoverview.querySelector('#p_description_overview').innerText = student.description;
 }
