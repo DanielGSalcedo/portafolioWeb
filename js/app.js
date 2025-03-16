@@ -193,7 +193,7 @@ async function edit_form(code) {
 }
 async function overview(code) {
     hideHome();
-    let pageoverview = document.querySelector('.overview')
+    const pageoverview = document.querySelector('.overview')
     pageoverview.style.display = 'flex';
     let student = await api.getStudent(code);
     pageoverview.querySelector('#img_perfil_overview').src = student.photo;
@@ -202,4 +202,8 @@ async function overview(code) {
     pageoverview.querySelector('#span_overview_email').innerText = student.email;
     pageoverview.querySelector('a').href = student.github_link;
     pageoverview.querySelector('#p_description_overview').innerText = student.description;
+    pageoverview.querySelector('.button').addEventListener('click', async function(){
+        pageoverview.style.display = 'none';
+        await edit_form(code);
+    })
 }

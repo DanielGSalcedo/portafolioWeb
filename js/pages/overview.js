@@ -30,16 +30,24 @@ export default overview_page = `
         <div class="div_technologies_bottom">
                <div class="table_technologies_container">
                     <div class="table_technologies">
-                        <div class="header_technologies">Java</div>
-                        <div class="header_technologies">Angular</div>
-                        <div class="header_technologies">PHP</div>
-                        <div class="header_technologies">React JS</div>
-                        <div class="header_technologies_end">Python</div>
+                        <div class="header_technologies">technologies</div>
+                        <div class="header_technologies">level</div>
+                        
+                        <div class="cell_technologies">Java</div>
                         <div class="cell_technologies">0</div>
+                        
+                        <div class="cell_technologies">Angular</div>
                         <div class="cell_technologies">0</div>
+                        
+                        <div class="cell_technologies">PHP</div>
                         <div class="cell_technologies">0</div>
+                        
+                        <div class="cell_technologies">React JS</div>
                         <div class="cell_technologies">0</div>
-                        <div class="cell_technologies_end">0</div>
+                        
+                        <div class="cell_technologies">Python</div>
+                        <div class="cell_technologies">0</div>
+                       
                     </div>
                </div>
         </div>
