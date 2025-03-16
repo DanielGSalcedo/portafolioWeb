@@ -18,7 +18,6 @@
 </head>
 <body>
 <header>
-    <!--<button class="button"> options</button>-->
     <h1 class="titulo">Student Management System</h1>
     <div class="div_header_right">
         <div class="search-container">
@@ -39,80 +38,7 @@
         <div class="cards_div" id="studentsList"></div>
     </div>
 </div>
-
-<div class="registerContainer" id="register">
-
-    <div class="register">
-
-        <h2>Add New Student</h2>
-        <form id="form_register" action="#" class="registerForm">
-            <div class="div_register_input">
-                <div class="div_left">
-                    <label for="new_student_name">Full name*</label>
-                    <input id="new_student_name" type="text" placeholder="Jesus Perez">
-                    <label for="new_student_code">Student Code (ID)*</label>
-                    <input id="new_student_code" type="text" placeholder="1234">
-                    <label for="new_student_email">Email</label>
-                    <input id="new_student_email" type="email" placeholder="jesusperez@gmail.com">
-
-                </div>
-                <div class="div_right">
-                    <label for="new_student_githubLink">GitHub Link</label>
-                    <input id="new_student_githubLink" type="text" placeholder="https://github.com/jesusperez">
-                    <label for="new_student_photo">Photo URL</label>
-                    <input id="new_student_photo" type="text" placeholder="https://photo.com/jesusperez.jpg">
-
-                </div>
-            </div>
-            <div class="div_button_register">
-                <label for="new_student_description"> Description</label>
-                <textarea id="new_student_description" class="textarea_description" name="text_area" cols="30" rows="10"
-                          placeholder="Description"></textarea>
-                <input id="bnt_register" class="button_login" type="button" value="Register">
-            </div>
-
-        </form>
-
-        <button class="goBackBtn" id="goBack">Go back</button>
-    </div>
-
-</div>
-<template id="studentCardTemplate">
-    <div class="studentCard">
-        <div class="div_card_buttons_top">
-            <button class="button">
-                <span class="material-symbols-outlined">more_horiz</span>
-            </button>
-            <button class="button">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
-
-        <figure class="div_card">
-            <img class="profileImg student-photo" src="" alt="foto del estudiante">
-        </figure>
-
-        <div class="card_content">
-            <p class="nombre student-name">Estudiante</p>
-            <p class="codigo student-id">ID: <span id="student-code" >123</span></p>
-            <p class="correo student-email"> estudiante@gmail.com</p>
-
-            <div>
-                <button id="btn_edit" class="button ">
-                    <span class="material-symbols-outlined">edit_square</span> <label> Edit</label>
-                </button>
-                <button class="button ">
-                    <span class="material-symbols-outlined">import_contacts</span><label>  Overview</label>
-                </button>
-                <button class="student-github ">
-                    <img class="button_img" alt="" src="sources/logoGithub.png">
-                </button>
-            </div>
-        </div>
-    </div>
-</template>
-<script src="js/api.js"></script>
-<script src="js/app.js"></script>
-<script src="js/register.js"></script>
+<script src="js/api.js" ></script>
+<script src="js/app.js" type="module"></script>
 </body>
 </html>

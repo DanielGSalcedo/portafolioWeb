@@ -1,15 +1,24 @@
-const containerRegister = document.getElementById('register');
+import student_card from './pages/templates/student_card.js';
+import register from "./pages/register_form.js";
+import overviewhtml from "./pages/overview.js";
 
+document.querySelector('body').insertAdjacentHTML('beforeend', register);
+document.querySelector('body').insertAdjacentHTML('beforeend', overviewhtml);
+
+const containerRegister = document.getElementById('register');
 document.addEventListener('DOMContentLoaded', async () => {
     // Sample student data
 
     const studentsList = document.getElementById('studentsList');
-    const template = document.getElementById('studentCardTemplate');
+
     const registerBtn = document.getElementById('bnt_register');
 
     // Render students
     async function renderStudents() {
         const students = await api.getStudents();
+        const template = document.createElement('template');
+        template.innerHTML = student_card;
+        console.log(template);
         studentsList.innerHTML = '';
         students.forEach(student => {
             const clone = template.content.cloneNode(true);
@@ -47,6 +56,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             clone.querySelector('#btn_edit').addEventListener('click', async (event) => {
                 const code = event.target.closest('.studentCard').querySelector('#student-code').textContent;
                 await edit_form(code);
+            })
+            clone.querySelector('#btn_overview').addEventListener('click', async (event) => {
+                const code = event.target.closest('.studentCard').querySelector('#student-code').textContent;
+                overview(code);
             })
             studentsList.appendChild(clone);
         });
@@ -125,7 +138,7 @@ document.addEventListener('scroll', () => {
 document.querySelector('#add_student').addEventListener('click', function () {
     register_form()
 });
-document.getElementById('goBack').addEventListener('click', (e) => {
+document.getElementById('goBack').addEventListener('click', () => {
     hiddenRegisterForm();
     showHome();
 })
@@ -177,4 +190,9 @@ async function edit_form(code) {
         inputCode.disabled = true;
     }
 
+}
+function overview(code){
+    hideHome();
+    let pageoverview = document.querySelector('.overview')
+        pageoverview.style.display = 'flex';
 }
