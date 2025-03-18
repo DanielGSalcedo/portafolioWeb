@@ -26,10 +26,10 @@ export default register_form = `<div class="registerContainer" id="register">
                 <label for="new_student_description"> Description</label>
                 <textarea id="new_student_description" class="textarea_description" name="text_area" cols="30" rows="10"
                           placeholder="Description"></textarea>
-                <input id="bnt_register" class="button_login" type="button" value="Register">
+                <input id="bnt_register" class="button button_login " type="button" value="Register">
             </div>
 
         </form>
-        <button class="goBackBtn" id="goBack">Go back</button>
+        <button class="button goBackBtn " id="goBack">Go back</button>
     </div>
 </div>`;

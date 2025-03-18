@@ -66,8 +66,23 @@ const api = {
             throw error;
         }
     },
+    async deleteStudent(id) {
+        try {
+            const response = await fetch(`${API_URL}/student?code+=eq.${id}`, {
+                method: 'DELETE',
+                headers: this.headers
+            });
 
-    async getStudent(code) {
+            if (!response.ok) {
+                throw new Error('Failed to delete student');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error(`Error deleting student with id ${id}:`, error);
+            throw error;
+        }
+    },
+    async getStudent(code){
         try {
             const response = await fetch(`${API_URL}/student?code=eq.${code}&select=*`, {
                 headers: this.headers

@@ -7,7 +7,6 @@
 }
 /*google fonts*/
 
-
  .material-symbols-outlined {
     color: #D3D3D3;
      font-variation-settings:
@@ -19,20 +18,20 @@
  /*overview*/
 .overview{
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 100%;
     .div_profile{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items:center;
-
         margin: 1rem;
         border: solid 1px #D3D3D3;
         border-radius: 2rem;
-        width: 98%;
+        height: 100%;
+        min-width: 31rem;
     }
     .div_technologies{
         display: flex;
@@ -42,7 +41,7 @@
         margin: 1rem;
         border: solid 1px #D3D3D3;
         border-radius: 2rem;
-        width: 98%;
+        height: 100%;
         overflow: hidden;
     }
     .div_technologies h2{
@@ -60,7 +59,7 @@
         margin: 4rem;
         height: 100%;
     }
-    .div_technologies .button{
+    .div_technologies_top .button{
         min-width: 15rem;
         border-radius: 2rem;
         align-items: center;
@@ -76,6 +75,16 @@
         border-bottom: 1px solid #D3D3D3;
         padding: 2rem;
     }
+    .div_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        border-radius: 2rem;
+        width: 98%;
+        height: 40rem;
+    }
     .table_technologies_container{
         width: 100%;
         border-radius: 2rem ;
@@ -85,9 +94,8 @@
     }
     .table_technologies{
         display: grid;
-            grid-template-columns: 5fr 5fr ;
+            grid-template-columns: 5fr 5fr 1fr;
             text-align: center;
-
         width: 100%;
         height: 100%;
     }
@@ -107,14 +115,19 @@
 
     }
     .cell_technologies{
+        display: flex;
+        flex-direction: row;
         border: 1px  #D3D3D3;
         border-right: 1px solid;
         align-items: center;
         justify-content: center;
         text-align: center;
         padding: 0.5rem;
+
     }
     .cell_technologies_end{
+        display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
@@ -123,14 +136,15 @@
         width: 10rem ;
         height: 10rem;
         border-radius: 50%;
-        margin: 1rem;
     }
     .div_profile h3{
-        margin: 0.5rem;
+        margin: 1em;
+
     }
     .div_profile_basic_info{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
     }
     .div_profile_top{
         display: flex;
@@ -142,29 +156,48 @@
     .div_profile_bottom{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: center;
         margin: 1rem;
+        height: 100%;
     }
     .div_profile_bottom img{
-        width: 1rem;
+        width: 1.2rem;
         margin-right: 0.5rem;
         object-fit: cover;
     }
-    .div_profile_bottom p{
-        margin: 0.5rem;
+
+    }
+    .div_profile_bottom span{
+        align-items: center;
+        margin: 0 0.2rem;
+    }
+    .div_profile_bottom div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        margin: 0.1rem;
+    }
+    .div_profile_bottom h2{
+        padding: 0 0.5rem;
+        margin: 0.3rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
         align-items: center;
     }
     .div_profile_bottom h5{
         margin: 0.5rem;
     }
-    .div_profile_bottom button{
+    .div_profile button{
         border: 1px solid #D3D3D3;
         min-width: 8rem;
         border-radius: 2rem;
+        margin: 1rem;
     }
 
-}
+
  /*buttons*/
 .button{
     display: flex;
@@ -174,7 +207,7 @@
     min-width: 3.2rem;
     max-width: 3.2rem;
     height: 3.2rem;
-    border-radius: 50%;
+    border-radius: 2rem;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -270,17 +303,7 @@ header.scrolled {
     border-bottom: 1px solid #282c34;
 }
 
-.button_login{
 
-    background-color: #3674B5;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    font-weight: bold;
-}
 .cards_div{
     display: flex;
     justify-content: center;
@@ -522,7 +545,6 @@ header.scrolled {
 
 
 .boton:hover{
-    background-color: #578FCA;
     transition: 0.5s;
     transform: translateY(-1%);
 }
@@ -538,9 +560,7 @@ header.scrolled {
 }
 
 .registerBtn {
-
     border: none;
-    color: rgba(166, 0, 255, 0.6);
     font-weight: bold;
     font-size: 0.8rem;
     cursor: pointer;
@@ -588,7 +608,7 @@ header.scrolled {
     align-items: center;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0 0 25px rgba(166, 0, 255, 0.6);
+    border: 1px solid#D3D3D3;
 }
 
 .registerForm {
@@ -597,24 +617,42 @@ header.scrolled {
     padding: 2rem 0 0 0;
     width:100%;
 }
+.registerForm label{
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
 
 .registerForm input {
     height: 3rem;
     width: 100%;
-    margin: 1rem 01rem 0;
-    border: 1px solid rgba(166, 0, 255, 0.6);
+    margin: 1rem 0;
+    border: 1px solid #D3D3D3;
     border-radius: 0.5rem;
     place-content: center;
     padding: 0.5rem;
+    background: transparent;
+}
+.registerForm .button{
+    color:#D3D3D3 ;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 6rem;
+    border-radius: 2rem;
 }
 
 .goBackBtn{
     border: none;
-    color: #3674B5;
+    color: #D3D3D3;
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
     margin-top: 1rem;
+    background: transparent;
+    min-width: 5rem;
+    border-radius: 2rem;
 }
 
 .div_button_register{
@@ -653,10 +691,11 @@ header.scrolled {
     max-width: 100%;
     min-width: 100%;
     margin: 1rem;
-border: 1px solid rgba(166, 0, 255, 0.6);
+    border: 1px solid #D3D3D3;
     border-radius: 0.5rem;
     padding: 0.5rem;
     overflow: auto;
+    background: transparent;
 
 }
 .div_button_register{
@@ -686,6 +725,14 @@ border: 1px solid rgba(166, 0, 255, 0.6);
         margin-top: 10rem;
         justify-content:center;
         text-align: center;
+    }
+    .div_profile{
+        width: 100%;
+    }
+    .div_info{
+        flex-direction: column;
+        flex-wrap: wrap;
+
     }
 
 }

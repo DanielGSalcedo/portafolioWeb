@@ -19,14 +19,16 @@ export default student_card =`<div class="studentCard">
             <p class="correo student-email"> estudiante@gmail.com</p>
             <div>
                 <button id="btn_edit" class="button ">
-                    <span class="material-symbols-outlined">edit_square</span> <label> Edit</label>
+                    <span class="material-symbols-outlined">edit_square</span> <label for="btn_edit" > Edit</label>
                 </button>
                 <button id="btn_overview" class="button ">
-                    <span class="material-symbols-outlined">import_contacts</span><label>  Overview</label>
+                    <span class="material-symbols-outlined">import_contacts</span><label for="btn_overview">  Overview</label>
                 </button>
-                <button class="student-github ">
-                    <img class="button_img" alt="" src="sources/logoGithub.png">
-                </button>
+                <a target="_blank">  
+                    <button class="student-github ">
+                        <img class="button_img" alt="" src="/sources/logoGithub.png">
+                    </button>
+                </a>
             </div>
         </div>
     </div>`;
